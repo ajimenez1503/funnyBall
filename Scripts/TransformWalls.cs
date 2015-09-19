@@ -1,8 +1,9 @@
 using UnityEngine;
 using System.Collections;
 
-public class TransforWalls : MonoBehaviour {
+public class TransformWalls : MonoBehaviour {
 
+	//declare all atribute 
 	public GameObject board;
 
 	public GameObject WallsHorizontal;
@@ -13,6 +14,7 @@ public class TransforWalls : MonoBehaviour {
 	public GameObject WallsWest;
 	public GameObject WallsEast;
 
+	public GameObject Cylinders;
 	public GameObject CylinderA1;
 	public GameObject CylinderA2;
 	public GameObject CylinderA3;
@@ -20,42 +22,45 @@ public class TransforWalls : MonoBehaviour {
 
 	public float ScaleX,ScaleZ;
 
-	// Use this for initialization
+	public float heightWalls;
+	public float heightCylinder;
+
+	// Use this for initialization. 
+	//we position and scale the elements of the main board. 
 	void Start () {
+		//board
 		board.transform.localPosition= new Vector3(0, 0, 0);
 		board.transform.localScale = new Vector3(ScaleX, 1, ScaleZ);
 
-		WallsHorizontal.transform.localPosition= new Vector3 (0, 1.5F, 0);
-		WallsHorizontal.transform.localScale = new Vector3(ScaleX, 4, 1F);
+		//walls
+			//Horizontal Walls
+			WallsHorizontal.transform.localPosition= new Vector3 (0, (heightWalls/2)-0.5F, 0);
+			WallsHorizontal.transform.localScale = new Vector3(ScaleX, heightWalls, 1F);
+				//North Walls
+				float positionZ = (ScaleZ / 2) + 0.5F;
+				WallsNorth.transform.localPosition= new Vector3 (0, 0, positionZ);
+				WallsNorth.transform.localScale = new Vector3(1, 1, 1);
+				//South Walls
+				WallsSouth.transform.localPosition= new Vector3 (0, 0, -positionZ);
+				WallsSouth.transform.localScale = new Vector3(1, 1, 1);
+			//Vertical Walls
+			WallsVertical.transform.localPosition= new Vector3 (0, (heightWalls/2)-0.5F, 0);
+			WallsVertical.transform.localScale = new Vector3(1, heightWalls, ScaleZ);
+				//west walls
+				float positionX = (ScaleX / 2) + 0.5F;
+				WallsWest.transform.localPosition= new Vector3 (positionX, 0,0 );
+				WallsWest.transform.localScale = new Vector3(1, 1, 1);
+				//Eeast Walls
+				WallsEast.transform.localPosition= new Vector3 (-positionX, 0,0 );
+				WallsEast.transform.localScale = new Vector3(1, 1, 1);
+		//cylinders
+		Cylinders.transform.localPosition= new Vector3 (0, (heightCylinder)-0.5F, 0);
+		Cylinders.transform.localScale = new Vector3(1, heightCylinder, 1);
 
-		float positionZ = (ScaleZ / 2) + 0.5F;
-		WallsNorth.transform.localPosition= new Vector3 (0, 0, positionZ);
-		WallsNorth.transform.localScale = new Vector3(1, 1, 1);
-
-		WallsSouth.transform.localPosition= new Vector3 (0, 0, -positionZ);
-		WallsSouth.transform.localScale = new Vector3(1, 1, 1);
-
-		WallsVertical.transform.localPosition= new Vector3 (0, 1.5F, 0);
-		WallsVertical.transform.localScale = new Vector3(1, 4, ScaleZ);
-
-		float positionX = (ScaleX / 2) + 0.5F;
-		WallsWest.transform.localPosition= new Vector3 (positionX, 0,0 );
-		WallsWest.transform.localScale = new Vector3(1, 1, 1);
-		
-		WallsEast.transform.localPosition= new Vector3 (-positionX, 0,0 );
-		WallsEast.transform.localScale = new Vector3(1, 1, 1);
-
-
-		CylinderA1.transform.localPosition = new Vector3 (positionX, 0, positionZ);
-		CylinderA2.transform.localPosition = new Vector3 (-positionX, 0, positionZ);
-		CylinderA3.transform.localPosition = new Vector3 (-positionX, 0, -positionZ);
-		CylinderA4.transform.localPosition = new Vector3 (positionX, 0, -positionZ);
-
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+			CylinderA1.transform.localPosition = new Vector3 (positionX, 0, positionZ);
+			CylinderA2.transform.localPosition = new Vector3 (-positionX, 0, positionZ);
+			CylinderA3.transform.localPosition = new Vector3 (-positionX, 0, -positionZ);
+			CylinderA4.transform.localPosition = new Vector3 (positionX, 0, -positionZ);
 	}
 }
+
