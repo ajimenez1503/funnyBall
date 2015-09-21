@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class MoveObstacle : MonoBehaviour {
@@ -27,10 +27,10 @@ public class MoveObstacle : MonoBehaviour {
 			initialize=true;
 		}
 		positionZ = obstacle.transform.localPosition.z;
-		if (positionZ > (scaleBoardZ) / 4) {
+		if (positionZ > (scaleBoardZ) / 4.0f) {
 			speed=-speed;
 		}
-		else if(positionZ < -(scaleBoardZ) / 4){
+		else if(positionZ < -(scaleBoardZ) / 4.0f){
 			speed=-speed;
 		}
 		positionZ = positionZ + speed;

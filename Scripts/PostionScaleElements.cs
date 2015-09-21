@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class PostionScaleElements : MonoBehaviour {
@@ -24,7 +24,22 @@ public class PostionScaleElements : MonoBehaviour {
 	public float heightCylinder;
 	
 	public GameObject obstacle;
-	
+
+	public GameObject ball;
+
+	public GameObject goal;
+
+
+	public void positionscaleGoal(){
+		goal.transform.localPosition = new Vector3 ((ScaleX / 2) -2, 0.5f, (ScaleZ/ 2)-5);
+		goal.transform.localScale = new Vector3(1.5F, 1F, 1.5F);
+	}
+
+	public void postionScaleBall(){
+		ball.transform.localPosition = new Vector3 (-(ScaleX / 2) + 1, 1.3f, 0);
+		ball.transform.localScale = new Vector3(0.01F, 0.01F, 0.01F);
+	}
+
 	public void positionScaleWalls(){
 		//walls
 		//Horizontal Walls
@@ -85,6 +100,8 @@ public class PostionScaleElements : MonoBehaviour {
 		positionScaleWalls ();
 		positionScaleCylinder ();
 		positionScaleObstacle ();
+		postionScaleBall ();
+		positionscaleGoal ();
 		
 	}
 }
