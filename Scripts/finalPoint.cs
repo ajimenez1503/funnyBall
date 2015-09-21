@@ -11,7 +11,6 @@ public class finalPoint : MonoBehaviour {
 	private float sizeScreenWidth; //width size of screen
 
 
-
 	// Use this for initialization
 	void Start () {
 		finish = false;
@@ -25,14 +24,12 @@ public class finalPoint : MonoBehaviour {
 			myButtonStyle.fontSize = 30;
 			if (GUI.Button (new Rect (sizeScreenWidth/4, 90, 110, 60), /*buttonTextureRestart*/"Restart",myButtonStyle)) {
 				Application.LoadLevel (Application.loadedLevel);
-				Debug.Log ("Clicked the button");
 				finish = false;
 				TextWin.text = "";
 			}
 			if (GUI.Button (new Rect (sizeScreenWidth*2/4, 90, 110, 60), /*buttonTextureContinue*/"Next",myButtonStyle)) {
 				//go to next scene
 				//Application.loadedLevel("Scene2");
-				Debug.Log ("Clicked the button");
 				finish = false;
 				TextWin.text = "";
 			}
