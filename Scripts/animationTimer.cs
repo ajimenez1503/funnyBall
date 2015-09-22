@@ -2,31 +2,31 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class CircularProgress : MonoBehaviour {
+public class animationTimer : MonoBehaviour {
 
 	public int timeToComplete;
 	public Image timer;
 	public finishgame finish;
 
 	private float timeLeft;
-	private bool isPaused;
+	private bool stop;
 	
 	// Use this for initialization
 	void Start () {
 		timeLeft = 1.0f;
-		isPaused = false;
+		stop = false;
 	}
 
 	void Update(){
-		if (!isPaused) {
+		if (!stop) {
 			timeLeft -= Time.deltaTime * 1.0f / timeToComplete;
-
 			timer.fillAmount = timeLeft;
+			if (IsFinished ()) {
+				finish.gameOver ();
+			}
 		}
 
-		if (IsFinished ()) {
-			finish.gameOver ();
-		}
+
 
 	}
 
@@ -34,12 +34,13 @@ public class CircularProgress : MonoBehaviour {
 		return timeLeft <= 0;
 	}
 
-	public void Pause(){
-		isPaused = true;
+	public void Stop(){
+		stop = true;
+		timer.fillAmount = 0;
 	}
 
 	public void Continue(){
-		isPaused = false;
+		stop = false;
 	}
 
 }
