@@ -15,7 +15,7 @@ public class moveHammer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (gradeZ > 20) {
+		if (gradeZ > 40) {
 			speed=-speed;
 		}
 		else if(gradeZ < 0){
