@@ -1336,6 +1336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c8e84b711db064784d5bdaa64f396b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  finishmenu: {fileID: 1080406933}
   buttonTexture: {fileID: 2800000, guid: 4b99eaf05763bd849bb0f403a6d3da9b, type: 3}
 --- !u!114 &1080406933
 MonoBehaviour:

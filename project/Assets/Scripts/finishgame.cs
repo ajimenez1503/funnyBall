@@ -75,6 +75,16 @@ public class finishgame : MonoBehaviour {
 		TextWin.text = "Game OVer";
 		finish = 2;
 	}
+	public void startPause(){
+		TextWin.text = "Game paused";
+		finish = 2;
+	}
+	public void finishPause(){
+		finish = 0;
+		TextWin.text = "";
+	}
+
+
 	void Update() {
 		if (Input.GetKey("escape"))//if you press ESC your game finsih
 			Application.Quit();
