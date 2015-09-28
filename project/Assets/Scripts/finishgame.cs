@@ -22,7 +22,7 @@ public class finishgame : MonoBehaviour {
 			GUIStyle myButtonStyle = new GUIStyle(GUI.skin.button);
 			myButtonStyle.fontSize = 30;
 			if(finish==1){
-				if (GUI.Button (new Rect (sizeScreenWidth/4, 90, 110, 60), /*buttonTextureRestart*/"Restart",myButtonStyle)) {
+				if (GUI.Button (new Rect (sizeScreenWidth*1/4, 90, 110, 60), /*buttonTextureRestart*/"Restart",myButtonStyle)) {
 					Application.LoadLevel (Application.loadedLevel);
 					cleanMenuStart();
 				}
@@ -31,11 +31,19 @@ public class finishgame : MonoBehaviour {
 					//Application.loadedLevel("Scene2");
 					cleanMenuStart();
 				}
+				if (GUI.Button (new Rect (sizeScreenWidth*3/4, 90, 110, 60), /*buttonTextureContinue*/"Exit",myButtonStyle)) {
+					//exit game
+					Application.Quit();
+				}
 			}
 			if(finish==2){
-				if (GUI.Button (new Rect (sizeScreenWidth/3, 90, 110, 60),  /*buttonTextureRestart*/"Restart",myButtonStyle)) {
+				if (GUI.Button (new Rect (sizeScreenWidth/4, 90, 110, 60),  /*buttonTextureRestart*/"Restart",myButtonStyle)) {
 					Application.LoadLevel (Application.loadedLevel);
 					cleanMenuStart();
+				}
+				if (GUI.Button (new Rect (sizeScreenWidth*2/4, 90, 110, 60), /*buttonTextureContinue*/"Exit",myButtonStyle)) {
+					//exit game
+					Application.Quit();
 				}
 			}
 
@@ -66,5 +74,10 @@ public class finishgame : MonoBehaviour {
 		clearPauseTimer ();
 		TextWin.text = "Game OVer";
 		finish = 2;
+	}
+	void Update() {
+		if (Input.GetKey("escape"))//if you press ESC your game finsih
+			Application.Quit();
+		
 	}
 }
