@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\finalPoint.cs" />
      <Compile Include="Assets\Scripts\finishgame.cs" />
      <Compile Include="Assets\Scripts\moveHammer.cs" />
+     <Compile Include="Assets\Scripts\nameScene.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

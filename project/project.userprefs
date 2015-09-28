@@ -1,11 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PostionScaleElements.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\nameScene.cs">
     <Files>
       <File FileName="Assets\Scripts\ApplicationPause.cs" Line="45" Column="25" />
       <File FileName="Assets\Scripts\MoveObstacle.cs" Line="39" Column="4" />
       <File FileName="Assets\Scripts\moveHammer.cs" Line="19" Column="58" />
       <File FileName="Assets\Scripts\PostionScaleElements.cs" Line="37" Column="54" />
+      <File FileName="Assets\Scripts\DestroyByBounds.cs" Line="12" Column="24" />
+      <File FileName="Assets\Scripts\finalPoint.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\finishgame.cs" Line="82" Column="22" />
+      <File FileName="Assets\Scripts\nameScene.cs" Line="11" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
