@@ -42,5 +42,9 @@ public class ApplicationPause : MonoBehaviour {
 		appear = false;
 	}
 
+	public bool isPaused(){
+		return paused;
+	}
+
 
 }

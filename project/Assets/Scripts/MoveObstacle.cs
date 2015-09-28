@@ -10,6 +10,7 @@ public class MoveObstacle : MonoBehaviour {
 
 	private float positionX,positionZ,scaleBoardZ;
 	private bool initialize;
+	public ApplicationPause pause;
 
 	// Use this for initialization
 	void Start () {
@@ -20,21 +21,21 @@ public class MoveObstacle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//initilice only the firts frame
-		if (!initialize) {
-			positionX=obstacle.transform.localPosition.x;
-			scaleBoardZ=board.transform.localScale.z;
-			initialize=true;
+		if (pause != null && !pause.isPaused ()) {//if not paused
+			//initilice only the firts frame
+			if (!initialize) {
+				positionX = obstacle.transform.localPosition.x;
+				scaleBoardZ = board.transform.localScale.z;
+				initialize = true;
+			}
+			positionZ = obstacle.transform.localPosition.z;
+			if (positionZ > (scaleBoardZ) / 4.0f) {
+				speed = -speed;
+			} else if (positionZ < -(scaleBoardZ) / 4.0f) {
+				speed = -speed;
+			}
+			positionZ = positionZ + speed;
+			obstacle.transform.localPosition = new Vector3 (positionX, 1, positionZ);
 		}
-		positionZ = obstacle.transform.localPosition.z;
-		if (positionZ > (scaleBoardZ) / 4.0f) {
-			speed=-speed;
-		}
-		else if(positionZ < -(scaleBoardZ) / 4.0f){
-			speed=-speed;
-		}
-		positionZ = positionZ + speed;
-		obstacle.transform.localPosition= new Vector3(positionX, 1, positionZ);
-	
 	}
 }

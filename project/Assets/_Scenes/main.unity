@@ -362,6 +362,7 @@ MonoBehaviour:
   obstacle: {fileID: 353450023}
   board: {fileID: 357613256}
   speed: .5
+  pause: {fileID: 1080406932}
 --- !u!54 &353450029
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -501,6 +502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  pause: {fileID: 1080406932}
 --- !u!65 &406251997
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -919,6 +921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  pause: {fileID: 0}
 --- !u!1 &818686930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,6 +1416,7 @@ MonoBehaviour:
   obstacle: {fileID: 1098119984}
   board: {fileID: 357613256}
   speed: -.899999976
+  pause: {fileID: 1080406932}
 --- !u!23 &1098119988
 MeshRenderer:
   m_ObjectHideFlags: 0
