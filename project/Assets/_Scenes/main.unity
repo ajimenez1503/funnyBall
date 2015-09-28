@@ -1306,7 +1306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   board: {fileID: 357613256}
-  ScaleX: 20
+  ScaleX: 35
   ScaleZ: 20
   heightWalls: 4
   WallsHorizontal: {fileID: 2089703452}
@@ -1324,6 +1324,7 @@ MonoBehaviour:
   obstacle: {fileID: 353450023}
   ball: {fileID: 1137001049}
   goal: {fileID: 597880107}
+  hammer: {fileID: 406251994}
 --- !u!114 &1080406932
 MonoBehaviour:
   m_ObjectHideFlags: 0
