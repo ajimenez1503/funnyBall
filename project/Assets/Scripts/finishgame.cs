@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
+using System;
+using System.Collections.Generic;
 
 public class finishgame : MonoBehaviour {
 
@@ -28,7 +31,7 @@ public class finishgame : MonoBehaviour {
 				}
 				if (GUI.Button (new Rect (sizeScreenWidth*2/4, 90, 110, 60), /*buttonTextureContinue*/"Next",myButtonStyle)) {
 					//go to next scene
-					//Application.loadedLevel("Scene2");
+					Application.LoadLevel(nextScene());
 					cleanMenuStart();
 				}
 				if (GUI.Button (new Rect (sizeScreenWidth*3/4, 90, 110, 60), /*buttonTextureContinue*/"Exit",myButtonStyle)) {
@@ -49,6 +52,21 @@ public class finishgame : MonoBehaviour {
 
 		}
 	}
+
+	private string nextScene(){
+		int currentScene = Application.loadedLevel;
+		currentScene = currentScene + 1;//next scene
+
+		//check if the number scene exits
+		if (Application.CanStreamedLevelBeLoaded(currentScene)) {
+			return "Scene" + currentScene;//the name the scene
+		}//if not exist come back to the first scene. 
+		else{
+			return "Scene" + 0;
+		}
+	}
+
+
 
 	private void cleanMenuStart(){
 		finish = 0;
