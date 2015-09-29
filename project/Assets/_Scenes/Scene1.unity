@@ -3108,6 +3108,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1526098074}
+  - 136: {fileID: 1526098075}
+  - 114: {fileID: 1526098076}
   m_Layer: 0
   m_Name: fire
   m_TagString: Untagged
@@ -3129,6 +3131,32 @@ Transform:
   - {fileID: 1139465908}
   m_Father: {fileID: 1080406929}
   m_RootOrder: 0
+--- !u!136 &1526098075
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1526098073}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .850000024
+  m_Height: 4.30999994
+  m_Direction: 1
+  m_Center: {x: 3.6400001, y: 1.88, z: 2.75999999}
+--- !u!114 &1526098076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1526098073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44868e614d4dd434198a076f42991865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOver: {fileID: 1080406933}
+  playerExplosion: {fileID: 100008, guid: ef5c255611bca2c49ba6d3dc1233f428, type: 2}
 --- !u!1 &1602280992
 GameObject:
   m_ObjectHideFlags: 0
