@@ -48,9 +48,11 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\ApplicationPause.cs" />
      <Compile Include="Assets\Scripts\CameraMove.cs" />
+     <Compile Include="Assets\Scripts\Collect.cs" />
      <Compile Include="Assets\Scripts\DestroyByBounds.cs" />
      <Compile Include="Assets\Scripts\MoveBoard.cs" />
      <Compile Include="Assets\Scripts\MoveObstacle.cs" />
+     <Compile Include="Assets\Scripts\MovePickup.cs" />
      <Compile Include="Assets\Scripts\PostionScaleElements.cs" />
      <Compile Include="Assets\Scripts\animationTimer.cs" />
      <Compile Include="Assets\Scripts\finalPoint.cs" />
