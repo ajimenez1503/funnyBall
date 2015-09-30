@@ -9,15 +9,38 @@ public class Finishgame : MonoBehaviour {
 	public AnimationTimer timer;
 	public ApplicationPause buttonPause;
 	public GUIText TextWin;
+
+	public AudioClip ambientMusic;
+	public AudioClip winningSound;
+	public AudioClip gameOverSound;
+
 	//public Texture buttonTextureRestart,buttonTextureContinue;
 	private int finish;//0=not finish 1=win 2=gameover
-	
+
+	private AudioSource musicPlayer;
+	private AudioSource winMusic;
+	private AudioSource gameOverMusic;
+
 	private float sizeScreenWidth; //width size of screen
 	// Use this for initialization
 	void Start () {
 		finish = 0;
 		sizeScreenWidth = Screen.width;
 		TextWin.text = "";
+
+		winMusic = gameObject.AddComponent<AudioSource> ();
+		winMusic.playOnAwake = false;
+		winMusic.clip = winningSound;
+
+		gameOverMusic = gameObject.AddComponent<AudioSource> ();
+		gameOverMusic.playOnAwake = false;
+		gameOverMusic.clip = gameOverSound;
+
+		musicPlayer = gameObject.AddComponent<AudioSource> ();
+		musicPlayer.playOnAwake = true;
+		musicPlayer.loop = true;
+		musicPlayer.clip = ambientMusic;
+		musicPlayer.Play ();
 	}
 	
 	void OnGUI() {
@@ -83,21 +106,27 @@ public class Finishgame : MonoBehaviour {
 	
 	public  void win ()
 	{
+		musicPlayer.Stop ();
+		winMusic.Play ();
 		clearPauseTimer ();
 		TextWin.text = "You Win!";
 		finish = 1;
 	}
 	public void gameOver()
 	{
+		musicPlayer.Stop ();
+		gameOverMusic.Play ();
 		clearPauseTimer ();
 		TextWin.text = "Game OVer";
 		finish = 2;
 	}
 	public void startPause(){
+		musicPlayer.Pause ();
 		TextWin.text = "Game paused";
 		finish = 2;
 	}
 	public void finishPause(){
+		musicPlayer.Play ();
 		finish = 0;
 		TextWin.text = "";
 	}

@@ -4,13 +4,19 @@ using System.Collections;
 public class Collect : MonoBehaviour {
 	public int count;
 	public GameObject finalPoint;
-	public GameObject pickupPlayer;
+	public AudioClip pickUpSound;
 
+
+	private AudioSource pickupPlayer;
 	private Collider goal;
 
 	void Start(){
 		goal = finalPoint.GetComponent<BoxCollider>();
 		goal.enabled = false;
+
+		pickupPlayer = gameObject.AddComponent<AudioSource> ();
+		pickupPlayer.playOnAwake = false;
+		pickupPlayer.clip = pickUpSound;
 	}
 
 
@@ -19,7 +25,7 @@ public class Collect : MonoBehaviour {
 	void OnTriggerEnter (Collider other) {
 		if(other.CompareTag("Pick Up")){
 			other.gameObject.SetActive(false);
-			pickupPlayer.GetComponent<AudioSource>().Play();
+			pickupPlayer.Play();
 			--count;
 		}
 
