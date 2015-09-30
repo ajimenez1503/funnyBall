@@ -18,6 +18,7 @@ public class DestroyByContact : MonoBehaviour {
 	void Update () {
 		if (canGameOver) {//when the wait time finish appear game over
 			gameOver.gameOver ();
+			canGameOver=false;
 		}
 		
 	}
