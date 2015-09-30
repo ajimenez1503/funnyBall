@@ -5,15 +5,21 @@ public class DestroyByContact : MonoBehaviour {
 
 	public finishgame gameOver;
 	public GameObject playerExplosion;
-	public float lifetime;
+	public float procDuration;
+	private bool canGameOver;
 
 	// Use this for initialization
 	void Start () {
+		canGameOver = false;
 	}
+
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (canGameOver) {//when the wait time finish appear game over
+			gameOver.gameOver ();
+		}
+		
 	}
 
 	void OnTriggerEnter(Collider other) 
@@ -22,9 +28,20 @@ public class DestroyByContact : MonoBehaviour {
 		{
 			Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
 			other.gameObject.SetActive(false);
-			gameOver.gameOver ();
+			StartCoroutine(Wait());//wait a specific time to show the explosion
 		}
 	}
 
+	//wait a specific time
+	private IEnumerator Wait()
+	{
+		canGameOver = false;
+		//print(Time.time);
+		yield return new WaitForSeconds(procDuration);   //Wait
+		//print(Time.time);
+		canGameOver = true;//when the wait time finish appear game over
 
+	}
+	
+	
 }
