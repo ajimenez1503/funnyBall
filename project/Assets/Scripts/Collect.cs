@@ -4,6 +4,7 @@ using System.Collections;
 public class Collect : MonoBehaviour {
 	public int count;
 	public GameObject finalPoint;
+	public GameObject pickupPlayer;
 
 	private Collider goal;
 
@@ -18,6 +19,7 @@ public class Collect : MonoBehaviour {
 	void OnTriggerEnter (Collider other) {
 		if(other.CompareTag("Pick Up")){
 			other.gameObject.SetActive(false);
+			pickupPlayer.GetComponent<AudioSource>().Play();
 			--count;
 		}
 

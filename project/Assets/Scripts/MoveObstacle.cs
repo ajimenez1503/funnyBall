@@ -29,13 +29,23 @@ public class MoveObstacle : MonoBehaviour {
 				initialize = true;
 			}
 			positionZ = obstacle.transform.localPosition.z;
+
 			if (positionZ > (scaleBoardZ) / 4.0f) {
 				speed = -speed;
 			} else if (positionZ < -(scaleBoardZ) / 4.0f) {
 				speed = -speed;
 			}
+
 			positionZ = positionZ + speed;
 			obstacle.transform.localPosition = new Vector3 (positionX, 1, positionZ);
+		}
+	}
+
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.tag == "Wall")
+		{
+			speed = -speed;
 		}
 	}
 }

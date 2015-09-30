@@ -23,7 +23,7 @@ public class moveHammer : MonoBehaviour {
 				speed = -speed;
 			}
 			gradeZ = gradeZ + speed;
-			transform.localEulerAngles = new Vector3 (0, 0, gradeZ);
+			transform.localEulerAngles = new Vector3 (transform.localEulerAngles.x, transform.localEulerAngles.y, gradeZ);
 		}
 		
 	}
