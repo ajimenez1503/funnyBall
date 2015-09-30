@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 
-public class nameScene : MonoBehaviour {
+public class NameScene : MonoBehaviour {
 
 	public Text name;
 	// Use this for initialization

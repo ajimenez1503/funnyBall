@@ -3,7 +3,7 @@ using System.Collections;
 
 public class DestroyByContact : MonoBehaviour {
 
-	public finishgame gameOver;
+	public Finishgame gameOver;
 	public GameObject playerExplosion;
 	public float procDuration;
 	private bool canGameOver;

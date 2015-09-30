@@ -2,11 +2,11 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class animationTimer : MonoBehaviour {
+public class AnimationTimer : MonoBehaviour {
 
 	public int timeToComplete;
 	public Image timer;
-	public finishgame finish;
+	public Finishgame finish;
 
 	private float timeLeft;
 	private bool stop;

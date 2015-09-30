@@ -34,8 +34,8 @@ public class PostionScaleElements : MonoBehaviour {
 	public GameObject hammer;
 
 	public void positionScaleBounds(){
-		bounds.transform.localPosition = new Vector3 (0, 2f, 0);
-		bounds.transform.localScale = new Vector3 (ScaleX + 2, 6F, ScaleZ + 2);
+		bounds.transform.localPosition = new Vector3 (0,3f, 0);
+		bounds.transform.localScale = new Vector3 (ScaleX + 2, 8f, ScaleZ + 2);
 	}
 	/*
 	public void positionScaleHammer(){

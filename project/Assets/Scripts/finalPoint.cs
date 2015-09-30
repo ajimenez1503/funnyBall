@@ -2,9 +2,9 @@ using UnityEngine;
 using System.Collections;
 
 
-public class finalPoint : MonoBehaviour {
+public class FinalPoint : MonoBehaviour {
 
-	public finishgame menu;
+	public Finishgame menu;
 	// Use this for initialization
 	void Start () {
 	}

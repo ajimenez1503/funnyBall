@@ -4,7 +4,7 @@ using System.Collections;
 public class ApplicationPause : MonoBehaviour {
 
 
-	public finishgame finishmenu;
+	public Finishgame finishmenu;
 	private bool paused;
 	public Texture buttonTexture;
 	private bool appear;

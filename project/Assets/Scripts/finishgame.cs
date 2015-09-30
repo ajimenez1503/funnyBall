@@ -4,9 +4,9 @@ using System.Linq;
 using System;
 using System.Collections.Generic;
 
-public class finishgame : MonoBehaviour {
+public class Finishgame : MonoBehaviour {
 
-	public animationTimer timer;
+	public AnimationTimer timer;
 	public ApplicationPause buttonPause;
 	public GUIText TextWin;
 	//public Texture buttonTextureRestart,buttonTextureContinue;

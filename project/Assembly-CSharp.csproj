@@ -46,21 +46,21 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AnimationTimer.cs" />
      <Compile Include="Assets\Scripts\ApplicationPause.cs" />
      <Compile Include="Assets\Scripts\CameraMove.cs" />
      <Compile Include="Assets\Scripts\Collect.cs" />
      <Compile Include="Assets\Scripts\DestroyByBounds.cs" />
      <Compile Include="Assets\Scripts\DestroyByContact.cs" />
+     <Compile Include="Assets\Scripts\FinalPoint.cs" />
+     <Compile Include="Assets\Scripts\Finishgame.cs" />
      <Compile Include="Assets\Scripts\MoveBoard.cs" />
+     <Compile Include="Assets\Scripts\MoveHammer.cs" />
      <Compile Include="Assets\Scripts\MoveObstacle.cs" />
      <Compile Include="Assets\Scripts\MovePickup.cs" />
+     <Compile Include="Assets\Scripts\NameScene.cs" />
      <Compile Include="Assets\Scripts\PostionScaleElements.cs" />
      <Compile Include="Assets\Scripts\Teletransport.cs" />
-     <Compile Include="Assets\Scripts\animationTimer.cs" />
-     <Compile Include="Assets\Scripts\finalPoint.cs" />
-     <Compile Include="Assets\Scripts\finishgame.cs" />
-     <Compile Include="Assets\Scripts\moveHammer.cs" />
-     <Compile Include="Assets\Scripts\nameScene.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

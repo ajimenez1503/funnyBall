@@ -4,7 +4,7 @@ using System.Collections;
 public class DestroyByBounds : MonoBehaviour {
 
 
-	public finishgame gameOver;
+	public Finishgame gameOver;
 
 	//when a object is out of bounds, game over
 	void OnTriggerExit(Collider other)
