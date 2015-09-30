@@ -51,7 +51,6 @@
      <Compile Include="Assets\Scripts\Collect.cs" />
      <Compile Include="Assets\Scripts\DestroyByBounds.cs" />
      <Compile Include="Assets\Scripts\DestroyByContact.cs" />
-     <Compile Include="Assets\Scripts\DestroyByTime.cs" />
      <Compile Include="Assets\Scripts\MoveBoard.cs" />
      <Compile Include="Assets\Scripts\MoveObstacle.cs" />
      <Compile Include="Assets\Scripts\MovePickup.cs" />

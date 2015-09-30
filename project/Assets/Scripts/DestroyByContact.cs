@@ -5,11 +5,10 @@ public class DestroyByContact : MonoBehaviour {
 
 	public finishgame gameOver;
 	public GameObject playerExplosion;
-
+	public float lifetime;
 
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
@@ -22,9 +21,10 @@ public class DestroyByContact : MonoBehaviour {
 		if (other.tag == "ball")
 		{
 			Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
-			gameOver.gameOver ();
 			other.gameObject.SetActive(false);
+			gameOver.gameOver ();
 		}
 	}
+
 
 }

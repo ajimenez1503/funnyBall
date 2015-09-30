@@ -3157,6 +3157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOver: {fileID: 1080406933}
   playerExplosion: {fileID: 100008, guid: ef5c255611bca2c49ba6d3dc1233f428, type: 2}
+  lifetime: 2
 --- !u!1 &1602280992
 GameObject:
   m_ObjectHideFlags: 0
