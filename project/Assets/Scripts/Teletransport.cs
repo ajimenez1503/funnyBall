@@ -15,7 +15,7 @@ public class Teletransport : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (changed) {
-			player.transform.localPosition = new Vector3 (cross.transform.localPosition.x, player.transform.localPosition.y, cross.transform.localPosition.z);
+			player.transform.position = new Vector3 (cross.transform.position.x, cross.transform.position.y + 1.2f, cross.transform.position.z);
 			player.SetActive (true);
 			changed=false;
 		}
