@@ -10,15 +10,18 @@ public class ApplicationPause : MonoBehaviour {
 	private bool appear;
 
 
+
 	// Use this for initialization. 
 	void Start(){
 		paused = false;
 		appear = true;
+		Time.timeScale = 1;
+
 	}
 	
 	void OnGUI() {
 		if (appear) {
-			if (GUI.Button (new Rect (20, 470, 50, 50), buttonTexture)) {
+			if (GUI.Button (new Rect (20, Screen.height-125, 50, 50), buttonTexture)) {
 				if (paused) {
 					Time.timeScale = 1;
 					paused = false;

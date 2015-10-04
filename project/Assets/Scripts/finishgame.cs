@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Linq;
 using System;
@@ -8,7 +9,7 @@ public class Finishgame : MonoBehaviour {
 
 	public AnimationTimer timer;
 	public ApplicationPause buttonPause;
-	public GUIText TextWin;
+	public Text TextWin;
 
 	public AudioClip ambientMusic;
 	public AudioClip winningSound;
@@ -21,11 +22,9 @@ public class Finishgame : MonoBehaviour {
 	private AudioSource winMusic;
 	private AudioSource gameOverMusic;
 
-	private float sizeScreenWidth; //width size of screen
 	// Use this for initialization
 	void Start () {
 		finish = 0;
-		sizeScreenWidth = Screen.width;
 		TextWin.text = "";
 
 		winMusic = gameObject.AddComponent<AudioSource> ();
@@ -48,26 +47,26 @@ public class Finishgame : MonoBehaviour {
 			GUIStyle myButtonStyle = new GUIStyle(GUI.skin.button);
 			myButtonStyle.fontSize = 30;
 			if(finish==1){
-				if (GUI.Button (new Rect (sizeScreenWidth*1/4, 90, 110, 60), /*buttonTextureRestart*/"Restart",myButtonStyle)) {
+				if (GUI.Button (new Rect ((Screen.width*1/4) - 55, Screen.height/2, 110, 60), /*buttonTextureRestart*/"Restart",myButtonStyle)) {
 					Application.LoadLevel (Application.loadedLevel);
 					cleanMenuStart();
 				}
-				if (GUI.Button (new Rect (sizeScreenWidth*2/4, 90, 110, 60), /*buttonTextureContinue*/"Next",myButtonStyle)) {
+				if (GUI.Button (new Rect ((Screen.width*2/4) - 55, Screen.height/2, 110, 60), /*buttonTextureContinue*/"Next",myButtonStyle)) {
 					//go to next scene
 					Application.LoadLevel(nextScene());
 					cleanMenuStart();
 				}
-				if (GUI.Button (new Rect (sizeScreenWidth*3/4, 90, 110, 60), /*buttonTextureContinue*/"Exit",myButtonStyle)) {
+				if (GUI.Button (new Rect ((Screen.width*3/4) - 55, Screen.height/2, 110, 60), /*buttonTextureContinue*/"Exit",myButtonStyle)) {
 					//exit game
 					Application.Quit();
 				}
 			}
 			if(finish==2){
-				if (GUI.Button (new Rect (sizeScreenWidth/4, 90, 110, 60),  /*buttonTextureRestart*/"Restart",myButtonStyle)) {
+				if (GUI.Button (new Rect ((Screen.width/4) + 55, Screen.height/2, 110, 60),  /*buttonTextureRestart*/"Restart",myButtonStyle)) {
 					Application.LoadLevel (Application.loadedLevel);
 					cleanMenuStart();
 				}
-				if (GUI.Button (new Rect (sizeScreenWidth*2/4, 90, 110, 60), /*buttonTextureContinue*/"Exit",myButtonStyle)) {
+				if (GUI.Button (new Rect ((Screen.width*2/4) + 55, Screen.height/2, 110, 60), /*buttonTextureContinue*/"Exit",myButtonStyle)) {
 					//exit game
 					Application.Quit();
 				}
@@ -80,12 +79,12 @@ public class Finishgame : MonoBehaviour {
 		int currentScene = Application.loadedLevel;
 		currentScene = currentScene + 1;//next scene
 
-		//check if the number scene exits
-		if (Application.CanStreamedLevelBeLoaded(currentScene)) {
-			return "Scene" + currentScene;//the name the scene
-		}//if not exist come back to the first scene. 
+		//check if the number scene exits and if the scene is the last
+		if (Application.CanStreamedLevelBeLoaded(currentScene) && Application.CanStreamedLevelBeLoaded(currentScene+1) ) {
+				return "Scene" + currentScene;//the name the scene
+		}//if it is the las, go to credits
 		else{
-			return "Scene" + 0;
+			return "Credits";
 		}
 	}
 
