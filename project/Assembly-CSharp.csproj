@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ActivePower.cs" />
      <Compile Include="Assets\Scripts\AnimationTimer.cs" />
      <Compile Include="Assets\Scripts\ApplicationPause.cs" />
      <Compile Include="Assets\Scripts\CameraMove.cs" />
