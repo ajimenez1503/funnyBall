@@ -31,4 +31,7 @@ public class ActivePower : MonoBehaviour {
 
 		}
 	}
+	public bool isPowerActive(){
+		return isActive;
+	}
 }

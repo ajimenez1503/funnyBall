@@ -53,6 +53,8 @@
      <Compile Include="Assets\Scripts\Collect.cs" />
      <Compile Include="Assets\Scripts\DestroyByBounds.cs" />
      <Compile Include="Assets\Scripts\DestroyByContact.cs" />
+     <Compile Include="Assets\Scripts\DestroyByTime.cs" />
+     <Compile Include="Assets\Scripts\DestroyPower.cs" />
      <Compile Include="Assets\Scripts\ExitButton.cs" />
      <Compile Include="Assets\Scripts\FinalPoint.cs" />
      <Compile Include="Assets\Scripts\Finishgame.cs" />
