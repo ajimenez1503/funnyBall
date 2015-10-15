@@ -3,11 +3,16 @@ using System.Collections;
 using UnityEngine.UI;
 
 
-public class NameScene : MonoBehaviour {
+public class nameScene : MonoBehaviour {
 
-	public Text textName;
+	public Text name;
 	// Use this for initialization
 	void Start () {
-		textName.text = Application.loadedLevelName;
+		name.text = Application.loadedLevelName;
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
 	}
 }
