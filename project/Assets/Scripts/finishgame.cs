@@ -41,6 +41,16 @@ public class Finishgame : MonoBehaviour {
 		musicPlayer.clip = ambientMusic;
 		musicPlayer.Play ();
 	}
+
+	private void UnLockNextScene(){
+		int CurrentScene = Application.loadedLevel -1;//because scene0 start en level 1
+		CurrentScene = CurrentScene + 1;
+		print ("unlock scene" + CurrentScene);
+		if(PlayerPrefs.HasKey("SavedLevel"+CurrentScene.ToString())){//if the key exists already
+			PlayerPrefs.SetInt ("SavedLevel"+CurrentScene.ToString(), 1);
+		}
+
+	}
 	
 	void OnGUI() {
 		if (finish>0) {
@@ -53,7 +63,8 @@ public class Finishgame : MonoBehaviour {
 				}
 				if (GUI.Button (new Rect ((Screen.width*2/4) - 55, Screen.height/2, 110, 60), /*buttonTextureContinue*/"Next",myButtonStyle)) {
 					//go to next scene
-					Application.LoadLevel(nextScene());
+					UnLockNextScene();
+					Application.LoadLevel("MainMenu");
 					cleanMenuStart();
 				}
 				if (GUI.Button (new Rect ((Screen.width*3/4) - 55, Screen.height/2, 110, 60), /*buttonTextureContinue*/"Exit",myButtonStyle)) {
@@ -62,19 +73,24 @@ public class Finishgame : MonoBehaviour {
 				}
 			}
 			if(finish==2){
-				if (GUI.Button (new Rect ((Screen.width/4) + 55, Screen.height/2, 110, 60),  /*buttonTextureRestart*/"Restart",myButtonStyle)) {
+				if (GUI.Button (new Rect ((Screen.width*1/4) - 55, Screen.height/2, 110, 60),  /*buttonTextureRestart*/"Restart",myButtonStyle)) {
 					Application.LoadLevel (Application.loadedLevel);
 					cleanMenuStart();
 				}
-				if (GUI.Button (new Rect ((Screen.width*2/4) + 55, Screen.height/2, 110, 60), /*buttonTextureContinue*/"Exit",myButtonStyle)) {
+				if (GUI.Button (new Rect ((Screen.width*2/4) - 55, Screen.height/2, 110, 60), /*buttonTextureContinue*/"Exit",myButtonStyle)) {
 					//exit game
 					Application.Quit();
+				}
+				myButtonStyle.fontSize = 20;
+				if (GUI.Button (new Rect ((Screen.width*3/4) - 55, Screen.height/2, 110, 60), /*buttonTextureContinue*/"MainMenu",myButtonStyle)) {
+					Application.LoadLevel("MainMenu");
+					cleanMenuStart();
 				}
 			}
 
 		}
 	}
-
+	/*
 	private string nextScene(){
 		int currentScene = Application.loadedLevel;
 		currentScene = currentScene + 1;//next scene
@@ -87,7 +103,7 @@ public class Finishgame : MonoBehaviour {
 			return "Credits";
 		}
 	}
-
+	*/
 
 
 	private void cleanMenuStart(){

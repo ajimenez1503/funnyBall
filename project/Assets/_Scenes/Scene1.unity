@@ -361,7 +361,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 6dde51e1b337bde4cb58df84509343e7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e46ba70c9c208964087fe3fb1504769c, type: 2}
+      objectReference: {fileID: 2100000, guid: defe8bf46cbf6b74bb69a52377b73bcd, type: 2}
     - target: {fileID: 100002, guid: 6dde51e1b337bde4cb58df84509343e7, type: 3}
       propertyPath: m_TagString
       value: ball
@@ -918,7 +918,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1137001049}
-  board: {fileID: 1080406928}
   radius: 30
   angle: 80
 --- !u!1 &597880107 stripped
@@ -1693,6 +1692,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  ball1: {fileID: 1137001049}
+  ball2: {fileID: 0}
 --- !u!114 &1080406931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1906,7 +1907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 478cb807bf3cf754d91eb5d1db955f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 5
+  nbPickups: 5
   finalPoint: {fileID: 1602280992}
   wrongFinalPoint: {fileID: 492581387}
   pickUpSound: {fileID: 8300000, guid: a9db3624ce11e5649b48c69e9bc49257, type: 3}
@@ -2017,7 +2018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b3a2624049142499d62ebae4e9852a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: {fileID: 1302726713}
+  textName: {fileID: 1302726713}
 --- !u!114 &1302726713
 MonoBehaviour:
   m_ObjectHideFlags: 0

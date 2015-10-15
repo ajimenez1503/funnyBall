@@ -4,6 +4,8 @@ using System.Collections;
 public class MoveBoard : MonoBehaviour {
 	
 	public float speed;
+	public GameObject ball1;
+	public GameObject ball2 = null;
 	private float rotX;
 	private float rotZ;
 	
@@ -14,6 +16,11 @@ public class MoveBoard : MonoBehaviour {
 		//initialice rotation initial
 		rotX = 0;
 		rotZ = 0;
+
+		if(ball2 == null){
+			ball2 = new GameObject();
+			ball2.SetActive(false);
+		}
 	}
 	
 	// Update is called once per frame
@@ -43,6 +50,8 @@ public class MoveBoard : MonoBehaviour {
 		}
 
 		//move the board the rotation choose
-		transform.eulerAngles = new Vector3 (rotX, 0, rotZ);
+
+		if(ball1.activeSelf || ball2.activeSelf)
+			transform.eulerAngles = new Vector3 (rotX, 0, rotZ);
 	}
 }
