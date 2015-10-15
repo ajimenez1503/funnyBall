@@ -43,6 +43,7 @@ public class Finishgame : MonoBehaviour {
 	}
 
 	private void UnLockNextScene(){
+<<<<<<< HEAD
 		int CurrentScene = Application.loadedLevel -1;//because scene0 start en level 1
 		CurrentScene = CurrentScene + 1;
 		print ("unlock scene" + CurrentScene);
@@ -50,6 +51,12 @@ public class Finishgame : MonoBehaviour {
 			PlayerPrefs.SetInt ("SavedLevel"+CurrentScene.ToString(), 1);
 		}
 
+=======
+		int CurrentScene = Application.loadedLevel;
+		CurrentScene = CurrentScene + 1;
+		print ("unlock scene" + CurrentScene);
+		PlayerPrefs.SetInt ("SavedLevel"+CurrentScene.ToString(), 1);
+>>>>>>> 8172abea3ed608dd274286889318746fee256e15
 	}
 	
 	void OnGUI() {

@@ -83,7 +83,11 @@ public class MenuLevelLock : MonoBehaviour {
 		GUIStyle myButtonStyle = new GUIStyle(GUI.skin.button);
 		myButtonStyle.fontSize = 30;
 		//restart levels
+<<<<<<< HEAD
 		if (GUI.Button (new Rect ((Screen.width*1/4) - 55, Screen.height*3/4, 110, 60), /*buttonTextureRestart*/"Reset",myButtonStyle)) {
+=======
+		if (GUI.Button (new Rect ((Screen.width*1/4) - 55, Screen.height*3/4, 110, 60), /*buttonTextureRestart*/"Restart",myButtonStyle)) {
+>>>>>>> 8172abea3ed608dd274286889318746fee256e15
 			PlayerPrefs.DeleteAll();//delete PlayerPrefs and update the scene
 			Application.LoadLevel("MainMenu");
 		}
