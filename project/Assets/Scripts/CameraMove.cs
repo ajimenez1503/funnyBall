@@ -4,7 +4,6 @@ using System.Collections;
 public class CameraMove : MonoBehaviour {
 
 	public GameObject player;
-	public GameObject board;
 	public float radius;
 	public float angle;
 

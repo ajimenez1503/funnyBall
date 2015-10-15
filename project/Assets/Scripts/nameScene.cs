@@ -5,14 +5,9 @@ using UnityEngine.UI;
 
 public class NameScene : MonoBehaviour {
 
-	public Text name;
+	public Text textName;
 	// Use this for initialization
 	void Start () {
-		name.text = Application.loadedLevelName;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+		textName.text = Application.loadedLevelName;
 	}
 }

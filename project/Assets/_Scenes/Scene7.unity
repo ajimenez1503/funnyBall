@@ -1724,7 +1724,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1137001049}
-  board: {fileID: 1080406928}
   radius: 30
   angle: 80
 --- !u!1 &597880107 stripped
@@ -3404,6 +3403,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  ball1: {fileID: 1137001049}
+  ball2: {fileID: 0}
 --- !u!114 &1080406931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3621,7 +3622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 478cb807bf3cf754d91eb5d1db955f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 3
+  nbPickups: 3
   finalPoint: {fileID: 1602280992}
   wrongFinalPoint: {fileID: 123891504}
   pickUpSound: {fileID: 8300000, guid: a9db3624ce11e5649b48c69e9bc49257, type: 3}
@@ -3933,7 +3934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b3a2624049142499d62ebae4e9852a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: {fileID: 1302726713}
+  textName: {fileID: 1302726713}
 --- !u!114 &1302726713
 MonoBehaviour:
   m_ObjectHideFlags: 0
