@@ -41,6 +41,13 @@ public class Finishgame : MonoBehaviour {
 		musicPlayer.clip = ambientMusic;
 		musicPlayer.Play ();
 	}
+
+	private void UnLockNextScene(){
+		int CurrentScene = Application.loadedLevel;
+		CurrentScene = CurrentScene + 1;
+		print ("unlock scene" + CurrentScene);
+		PlayerPrefs.SetInt ("SavedLevel"+CurrentScene.ToString(), 1);
+	}
 	
 	void OnGUI() {
 		if (finish>0) {
@@ -53,7 +60,8 @@ public class Finishgame : MonoBehaviour {
 				}
 				if (GUI.Button (new Rect ((Screen.width*2/4) - 55, Screen.height/2, 110, 60), /*buttonTextureContinue*/"Next",myButtonStyle)) {
 					//go to next scene
-					Application.LoadLevel(nextScene());
+					UnLockNextScene();
+					Application.LoadLevel("MainMenu");
 					cleanMenuStart();
 				}
 				if (GUI.Button (new Rect ((Screen.width*3/4) - 55, Screen.height/2, 110, 60), /*buttonTextureContinue*/"Exit",myButtonStyle)) {
@@ -74,7 +82,7 @@ public class Finishgame : MonoBehaviour {
 
 		}
 	}
-
+	/*
 	private string nextScene(){
 		int currentScene = Application.loadedLevel;
 		currentScene = currentScene + 1;//next scene
@@ -87,7 +95,7 @@ public class Finishgame : MonoBehaviour {
 			return "Credits";
 		}
 	}
-
+	*/
 
 
 	private void cleanMenuStart(){

@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\ExitButton.cs" />
      <Compile Include="Assets\Scripts\FinalPoint.cs" />
      <Compile Include="Assets\Scripts\Finishgame.cs" />
+     <Compile Include="Assets\Scripts\MenuLevelLock.cs" />
      <Compile Include="Assets\Scripts\MoveBoard.cs" />
      <Compile Include="Assets\Scripts\MoveHammer.cs" />
      <Compile Include="Assets\Scripts\MoveObstacle.cs" />
