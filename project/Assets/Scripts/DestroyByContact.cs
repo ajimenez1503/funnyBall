@@ -25,10 +25,11 @@ public class DestroyByContact : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) 
 	{
+		//when the ball touch the fire
 		if (other.tag == "ball")
 		{
-			Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
-			other.gameObject.SetActive(false);
+			Instantiate(playerExplosion, other.transform.position, other.transform.rotation);//createh the explision
+			other.gameObject.SetActive(false);//deactive the ball
 			StartCoroutine(Wait());//wait a specific time to show the explosion
 		}
 	}

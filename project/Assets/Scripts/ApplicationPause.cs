@@ -18,29 +18,24 @@ public class ApplicationPause : MonoBehaviour {
 		Time.timeScale = 1;
 
 	}
-	
+
+	//show the pause/play button
 	void OnGUI() {
 		if (appear) {
-			if (GUI.Button (new Rect (20, Screen.height-125, 50, 50), buttonTexture)) {
-				if (paused) {
-					Time.timeScale = 1;
+			if (GUI.Button (new Rect (20, Screen.height-125, 50, 50), buttonTexture)) {//if the player do click
+				if (paused) {//play the fame
+					Time.timeScale = 1;//play the game
 					paused = false;
-					finishmenu.finishPause();
-
+					finishmenu.finishPause();//disappear the menu of pause
 				} else {
-					Time.timeScale = 0;
+					Time.timeScale = 0;//pause the game
 					paused = true;
-					finishmenu.startPause();
+					finishmenu.startPause();//appear the menu of pause
 				}
 			}
-			/*if (paused) {
-				GUIStyle myLabelStyle = new GUIStyle (GUI.skin.label);
-				myLabelStyle.fontSize = 30;
-				GUI.Label (new Rect (90, 450, 100, 100), "Game paused", myLabelStyle);
-			}*/
 		}
 	}
-
+	//Put off the button of play/pause
 	public void disapear(){
 		appear = false;
 	}
@@ -48,6 +43,4 @@ public class ApplicationPause : MonoBehaviour {
 	public bool isPaused(){
 		return paused;
 	}
-
-
 }

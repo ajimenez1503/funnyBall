@@ -14,8 +14,7 @@ public class Finishgame : MonoBehaviour {
 	public AudioClip ambientMusic;
 	public AudioClip winningSound;
 	public AudioClip gameOverSound;
-
-	//public Texture buttonTextureRestart,buttonTextureContinue;
+	
 	private int finish;//0=not finish 1=win 2=gameover
 
 	private AudioSource musicPlayer;
@@ -27,25 +26,26 @@ public class Finishgame : MonoBehaviour {
 		finish = 0;
 		TextWin.text = "";
 
-		winMusic = gameObject.AddComponent<AudioSource> ();
+		winMusic = gameObject.AddComponent<AudioSource> ();//asociate sound and setup
 		winMusic.playOnAwake = false;
 		winMusic.clip = winningSound;
 
-		gameOverMusic = gameObject.AddComponent<AudioSource> ();
+		gameOverMusic = gameObject.AddComponent<AudioSource> ();//asociate sound and setup
 		gameOverMusic.playOnAwake = false;
 		gameOverMusic.clip = gameOverSound;
 
-		musicPlayer = gameObject.AddComponent<AudioSource> ();
+		musicPlayer = gameObject.AddComponent<AudioSource> ();//asociate sound and setup
 		musicPlayer.playOnAwake = true;
 		musicPlayer.loop = true;
 		musicPlayer.clip = ambientMusic;
 		musicPlayer.Play ();
 	}
 
+	//unlock the next scene
 	private void UnLockNextScene(){
 		int CurrentScene = Application.loadedLevel -1;//because scene0 start en level 1
 		CurrentScene = CurrentScene + 1;
-		print ("unlock scene" + CurrentScene);
+		//print ("unlock scene" + CurrentScene);
 		if(PlayerPrefs.HasKey("SavedLevel"+CurrentScene.ToString())){//if the key exists already
 			PlayerPrefs.SetInt ("SavedLevel"+CurrentScene.ToString(), 1);
 		}
@@ -56,28 +56,28 @@ public class Finishgame : MonoBehaviour {
 		if (finish>0) {
 			GUIStyle myButtonStyle = new GUIStyle(GUI.skin.button);
 			myButtonStyle.fontSize = 30;
-			if(finish==1){
-				if (GUI.Button (new Rect ((Screen.width*1/4) - 55, Screen.height/2, 110, 60), /*buttonTextureRestart*/"Restart",myButtonStyle)) {
+			if(finish==1){//1=win. Create the button
+				if (GUI.Button (new Rect ((Screen.width*1/4) - 55, Screen.height/2, 110, 60), "Restart",myButtonStyle)) {
 					Application.LoadLevel (Application.loadedLevel);
 					cleanMenuStart();
 				}
-				if (GUI.Button (new Rect ((Screen.width*2/4) - 55, Screen.height/2, 110, 60), /*buttonTextureContinue*/"Next",myButtonStyle)) {
+				if (GUI.Button (new Rect ((Screen.width*2/4) - 55, Screen.height/2, 110, 60), "Next",myButtonStyle)) {
 					//go to next scene
 					UnLockNextScene();
 					Application.LoadLevel("MainMenu");
 					cleanMenuStart();
 				}
-				if (GUI.Button (new Rect ((Screen.width*3/4) - 55, Screen.height/2, 110, 60), /*buttonTextureContinue*/"Exit",myButtonStyle)) {
+				if (GUI.Button (new Rect ((Screen.width*3/4) - 55, Screen.height/2, 110, 60), "Exit",myButtonStyle)) {
 					//exit game
 					Application.Quit();
 				}
 			}
-			if(finish==2){
-				if (GUI.Button (new Rect ((Screen.width*1/4) - 55, Screen.height/2, 110, 60),  /*buttonTextureRestart*/"Restart",myButtonStyle)) {
+			if(finish==2){//2=gameover. Create the button
+				if (GUI.Button (new Rect ((Screen.width*1/4) - 55, Screen.height/2, 110, 60),"Restart",myButtonStyle)) {
 					Application.LoadLevel (Application.loadedLevel);
 					cleanMenuStart();
 				}
-				if (GUI.Button (new Rect ((Screen.width*2/4) - 55, Screen.height/2, 110, 60), /*buttonTextureContinue*/"Exit",myButtonStyle)) {
+				if (GUI.Button (new Rect ((Screen.width*2/4) - 55, Screen.height/2, 110, 60),"Exit",myButtonStyle)) {
 					//exit game
 					Application.Quit();
 				}
@@ -105,14 +105,17 @@ public class Finishgame : MonoBehaviour {
 	}
 	*/
 
-
-	private void cleanMenuStart(){
+	//restar the game
+	private void cleanMenuStart()
+	{
 		finish = 0;
 		TextWin.text = "";
 		Time.timeScale = 1;
 	}
 
-	private void clearPauseTimer(){
+	//put off the button of play/pause
+	private void clearPauseTimer()
+	{
 		buttonPause.disapear ();
 		timer.Stop ();
 		Time.timeScale = 0;
@@ -138,7 +141,7 @@ public class Finishgame : MonoBehaviour {
 	public void startPause(){
 		musicPlayer.Pause ();
 		TextWin.text = "Game paused";
-		finish = 2;
+		finish = 2;//active the same menu of gameover
 	}
 	public void finishPause(){
 		musicPlayer.Play ();
@@ -146,7 +149,7 @@ public class Finishgame : MonoBehaviour {
 		TextWin.text = "";
 	}
 
-
+	//exit the game if press "escape"
 	void Update() {
 		if (Input.GetKey("escape"))//if you press ESC your game finsih
 			Application.Quit();

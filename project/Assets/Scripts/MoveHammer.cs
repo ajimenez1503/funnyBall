@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MoveHammer : MonoBehaviour {
 
-	//declare all atribute 
+	//declare  atribute 
 	public float speed;
 	private float gradeZ;
 	// Use this for initialization
@@ -11,9 +11,7 @@ public class MoveHammer : MonoBehaviour {
 
 	void Start () {
 		gradeZ = 0;
-		
-	}
-	
+	}	
 	// Update is called once per frame
 	void Update () {
 		if (pause!=null && !pause.isPaused ()) {//if not paused
@@ -24,9 +22,6 @@ public class MoveHammer : MonoBehaviour {
 			}
 			gradeZ = gradeZ + speed;
 			transform.localEulerAngles = new Vector3 (transform.localEulerAngles.x, transform.localEulerAngles.y, gradeZ);
-		}
-		
+		}		
 	}
-
-
 }

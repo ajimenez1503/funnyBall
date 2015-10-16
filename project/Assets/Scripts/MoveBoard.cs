@@ -17,6 +17,7 @@ public class MoveBoard : MonoBehaviour {
 		rotX = 0;
 		rotZ = 0;
 
+		//deactive the ball 2
 		if(ball2 == null){
 			ball2 = new GameObject();
 			ball2.SetActive(false);
@@ -26,7 +27,7 @@ public class MoveBoard : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 
-
+		//when you press the arroy of keyboard move the angle
 		if (Input.GetKey (KeyCode.UpArrow)) {
 			rotX += speed;
 		} else if (Input.GetKey (KeyCode.DownArrow)) {
@@ -50,7 +51,6 @@ public class MoveBoard : MonoBehaviour {
 		}
 
 		//move the board the rotation choose
-
 		if(ball1.activeSelf || ball2.activeSelf)
 			transform.eulerAngles = new Vector3 (rotX, 0, rotZ);
 	}

@@ -5,10 +5,7 @@ using System.Collections;
 public class FinalPoint : MonoBehaviour {
 
 	public Finishgame menu;
-	// Use this for initialization
-	void Start () {
-	}
-	
+	//if the ball arrive to hte final point
 	void OnTriggerEnter(Collider other) 
 	{
 		if (other.tag == "ball")

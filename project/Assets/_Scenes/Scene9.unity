@@ -1548,7 +1548,7 @@ GameObject:
   - 33: {fileID: 189479495}
   - 23: {fileID: 189479494}
   m_Layer: 0
-  m_Name: Cible1
+  m_Name: target1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14921,7 +14921,7 @@ GameObject:
   - 23: {fileID: 933607553}
   - 114: {fileID: 933607552}
   m_Layer: 0
-  m_Name: Cible2Trigger
+  m_Name: target2Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17938,7 +17938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 478cb807bf3cf754d91eb5d1db955f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nbPickups: 0
+  nbPickups: 20
   finalPoint: {fileID: 1602280992}
   wrongFinalPoint: {fileID: 1158267939}
   pickUpSound: {fileID: 8300000, guid: a9db3624ce11e5649b48c69e9bc49257, type: 3}
@@ -18780,8 +18780,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball1: {fileID: 1137001049}
   ball2: {fileID: 1710626313}
-  cible1: {fileID: 1545690229}
-  cible2: {fileID: 933607550}
+  target1: {fileID: 1545690229}
+  target2: {fileID: 933607550}
   duplicationTime: .300000012
   haloPlayer: {fileID: 191428, guid: 31c55a30c1c9892448e40db8fbc02551, type: 2}
 --- !u!23 &1219877563
@@ -22174,7 +22174,7 @@ GameObject:
   - 23: {fileID: 1545690232}
   - 114: {fileID: 1545690231}
   m_Layer: 0
-  m_Name: Cible1Trigger
+  m_Name: target1Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23802,7 +23802,7 @@ GameObject:
   - 33: {fileID: 1710112215}
   - 23: {fileID: 1710112214}
   m_Layer: 0
-  m_Name: Cible2
+  m_Name: target2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27764,8 +27764,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.32999992, y: 1, z: 1}
+  m_Center: {x: -1.54999995, y: 0, z: 0}
 --- !u!33 &1844617051
 MeshFilter:
   m_ObjectHideFlags: 0

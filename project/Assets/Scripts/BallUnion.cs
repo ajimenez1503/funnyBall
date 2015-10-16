@@ -2,11 +2,11 @@
 using System.Collections;
 
 public class BallUnion : MonoBehaviour {
-	public GameObject haloPlayer;
-	public float unionTime;
-	public int id;
+	public GameObject haloPlayer;//animation light
+	public float unionTime;//time to wait for union
+	public int id;//id of the duplicator 
 
-	public static int currentID;
+	public static int currentID;//current duplicator that you have to use
 
 	private bool ballInside;
 	private bool ballInProcess;
@@ -15,22 +15,20 @@ public class BallUnion : MonoBehaviour {
 	void Start () {
 		ballInside = false;
 		ballInProcess = false;
-		currentID = -1;
-	}
-	
-	// Update is called once per frame
-	void Update () {
+		currentID = -1;//if you dont duplicate the ball
 	}
 
+	//when you touch the collider
 	void OnTriggerEnter(Collider other){
 		if (other.CompareTag ("ball") && !ballInside && !ballInProcess && (currentID == -1 || currentID == id)) {
-			Instantiate(haloPlayer, transform.position, transform.rotation);
-			other.gameObject.SetActive(false);
-			currentID = id;
-			StartCoroutine(waitUnion());
+			Instantiate(haloPlayer, transform.position, transform.rotation);//create the animation
+			other.gameObject.SetActive(false);//deactive the ball
+			currentID = id;//update the current duplicator
+			StartCoroutine(waitUnion());//wait
 		}
 	}
 
+	//when you go out the collider
 	void OnTriggerExit(Collider other){
 		if (other.CompareTag ("ball")) {
 			ballInside = false;
@@ -44,6 +42,7 @@ public class BallUnion : MonoBehaviour {
 	public bool isActivated(){
 		return ballInProcess;
 	}
+
 
 	public void processFinished(){
 		ballInProcess = false;

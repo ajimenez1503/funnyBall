@@ -36,7 +36,7 @@ public class MoveObstacle : MonoBehaviour {
 				speed = -speed;
 			}
 
-			positionZ = positionZ + speed;
+			positionZ = positionZ + speed;//change the position of the obstacle
 			obstacle.transform.localPosition = new Vector3 (positionX, 1, positionZ);
 		}
 	}

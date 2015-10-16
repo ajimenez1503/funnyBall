@@ -3,33 +3,32 @@ using System.Collections;
 
 public class Teletransport : MonoBehaviour {
 	public GameObject cross;
-	private float procDuration;
-	private bool changed;
+	private float timeTeletransport;
+	private bool teleported;
 	private GameObject player;
 	// Use this for initialization
 	void Start () {
-		procDuration = 0.7f;
-		changed = false;
+		timeTeletransport = 0.7f;
+		teleported = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (changed) {
+		if (teleported) {//if the ball is teleported, we changed the position
 			player.transform.position = new Vector3 (cross.transform.position.x, cross.transform.position.y + 1.2f, cross.transform.position.z);
 			player.SetActive (true);
-			changed=false;
+			teleported=false;
 		}
-
 	}
 	
 	void OnTriggerEnter(Collider other) 
 	{
+		//when the ball touch the teletransport
 		if (other.tag == "ball")
 		{
 			player=other.gameObject;
 			player.gameObject.SetActive(false);
 			StartCoroutine(Wait());//wait a specific time to show the explosion
-
 		}
 	}
 
@@ -37,9 +36,9 @@ public class Teletransport : MonoBehaviour {
 	private IEnumerator Wait()
 	{
 		//print(Time.time);
-		yield return new WaitForSeconds(procDuration);   //Wait
+		yield return new WaitForSeconds(timeTeletransport);   //Wait
 		//print(Time.time);
-		changed = true;//when the wait time finish appear game over
+		teleported = true;//when the wait time finish appear game over
 		
 	}
 

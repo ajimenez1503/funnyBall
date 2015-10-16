@@ -30,20 +30,13 @@ public class PostionScaleElements : MonoBehaviour {
 	public GameObject goal;
 
 	public GameObject bounds;
-	//obstacles
-	public GameObject hammer;
+
 
 	public void positionScaleBounds(){
 		bounds.transform.localPosition = new Vector3 (0,3f, 0);
 		bounds.transform.localScale = new Vector3 (ScaleX + 2, 8f, ScaleZ + 2);
 	}
-	/*
-	public void positionScaleHammer(){
-		hammer.transform.localPosition = new Vector3 ((ScaleX / 2) -9.6f, 2f, (ScaleZ/ 2)-3f);
-		hammer.transform.localScale = new Vector3(0.8F, 1F, 1F);
-	}
 
-*/
 	public void positionscaleGoal(){
 		goal.transform.localPosition = new Vector3 ((ScaleX / 2) -2, 0.5f, (ScaleZ/ 2)-5);
 		goal.transform.localScale = new Vector3(1.5F, 1F, 1.5F);
@@ -116,7 +109,6 @@ public class PostionScaleElements : MonoBehaviour {
 		positionScaleObstacle ();
 		postionScaleBall ();
 		positionscaleGoal ();
-		//positionScaleHammer();
 		positionScaleBounds ();
 	}
 }

@@ -9,7 +9,7 @@ public class CameraMoveDouble : MonoBehaviour {
 	public float angle;
 	
 	private Vector3 center;
-	private float newRadius;
+	private float newRadius;//we use when the balls are far between them. 
 	private Vector3 distances;
 	private Vector3 save_center;
 	
@@ -18,9 +18,9 @@ public class CameraMoveDouble : MonoBehaviour {
 		newRadius = radius;
 	}
 	
-	// Update is called once per frame
+	// LateUpdate is called after all Update functions have been called.
 	void LateUpdate () {
-		if (ball1.activeSelf && ball2.activeSelf)
+		if (ball1.activeSelf && ball2.activeSelf)//check if there are one or two ball active.
 			cameraTwoBalls ();
 		else if (ball1.activeSelf)
 			cameraOneBall (ball1);
@@ -36,19 +36,18 @@ public class CameraMoveDouble : MonoBehaviour {
 		save_center = center;
 	}
 
-	void cameraOneBall(GameObject ball){
-		if(ball.activeSelf)
+	//if there are only one ball, the center is this ball
+	private void cameraOneBall(GameObject ball){
 			center = ball.transform.position;
 	}
 
-	void cameraTwoBalls(){
+	//if there are two ball, the center is the middle of hte two ball.
+	private void cameraTwoBalls(){
 		distances = ball1.transform.position - ball2.transform.position;
-		
 		newRadius = Mathf.Sqrt(distances.x * distances.x + distances.y * distances.y + distances.z * distances.z);
-		
-		if (newRadius < radius)
+		if (newRadius < radius) {
 			newRadius = radius;
-		
+		}
 		center = (ball1.transform.position + ball2.transform.position)/2 ;
 	}
 }

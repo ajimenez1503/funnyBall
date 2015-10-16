@@ -20,18 +20,18 @@ public class Collect : MonoBehaviour {
 		if (nbPickups >= 0) // in the second ball, we put -1 pickups so it doesn't change
 			count = nbPickups;
 
-		goal = finalPoint.GetComponent<BoxCollider>();
-		goal.enabled = false;
+		goal = finalPoint.GetComponent<BoxCollider>();//get the collider
+		goal.enabled = false;//deactive collider
 
-		wrongGoal = wrongFinalPoint.GetComponent<BoxCollider> ();
-		wrongGoal.enabled = true;
+		wrongGoal = wrongFinalPoint.GetComponent<BoxCollider> ();//get the collider
+		wrongGoal.enabled = true;//active collider
 
-		pickupPlayer = gameObject.AddComponent<AudioSource> ();
+		pickupPlayer = gameObject.AddComponent<AudioSource> ();//create and setup the sound of pick-up.
 		pickupPlayer.playOnAwake = false;
 		pickupPlayer.clip = pickUpSound;
 
 
-		counter.text = "Pickups left : " + count;
+		counter.text = "Pickups left : " + count;//set text in the count
 	}
 
 
@@ -39,19 +39,19 @@ public class Collect : MonoBehaviour {
 	// Update is called once per frame
 	void OnTriggerEnter (Collider other) {
 		if(other.CompareTag("Pick Up")){
-			other.gameObject.SetActive(false);
-			pickupPlayer.Play();
-			--count;
-
+			Destroy(other.gameObject);//delete the pick up
+			pickupPlayer.Play();//play the sound
+			--count;//update the count
 			counter.text = "Pickups left : " + count;
 		}
 
-		if (IsFinished ()) {
+		if (IsFinished ()) {//allow finish the level
 			goal.enabled = true;
 			wrongGoal.enabled = false;
 		}
 	}
 
+	//check if there are more pick-up element
 	bool IsFinished(){
 		return count <= 0;
 	}
