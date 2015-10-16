@@ -3436,7 +3436,6 @@ MonoBehaviour:
   ball: {fileID: 1137001049}
   goal: {fileID: 597880107}
   bounds: {fileID: 753764324}
-  hammer: {fileID: 406251994}
 --- !u!114 &1080406932
 MonoBehaviour:
   m_ObjectHideFlags: 0

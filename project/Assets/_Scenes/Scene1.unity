@@ -443,7 +443,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 30c99dbc7e2b70e4a9e80020a71d5369, type: 2}
+  - {fileID: 2100000, guid: 1dc5f61d51f5faf4194128c7e9a052c1, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1725,7 +1725,6 @@ MonoBehaviour:
   ball: {fileID: 1137001049}
   goal: {fileID: 597880107}
   bounds: {fileID: 753764324}
-  hammer: {fileID: 406251994}
 --- !u!114 &1080406932
 MonoBehaviour:
   m_ObjectHideFlags: 0
