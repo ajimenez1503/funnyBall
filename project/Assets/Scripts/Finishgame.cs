@@ -105,6 +105,10 @@ public class Finishgame : MonoBehaviour {
 	}
 	*/
 
+	public bool isNotFinish(){
+		return finish == 0;
+	}
+
 	//restar the game
 	private void cleanMenuStart()
 	{
@@ -153,6 +157,5 @@ public class Finishgame : MonoBehaviour {
 	void Update() {
 		if (Input.GetKey("escape"))//if you press ESC your game finsih
 			Application.Quit();
-		
 	}
 }

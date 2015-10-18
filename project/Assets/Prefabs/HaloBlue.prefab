@@ -13,7 +13,7 @@ GameObject:
   - 111: {fileID: 11127064}
   - 114: {fileID: 11462042}
   m_Layer: 0
-  m_Name: Halo
+  m_Name: HaloBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

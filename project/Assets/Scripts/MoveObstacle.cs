@@ -10,33 +10,18 @@ public class MoveObstacle : MonoBehaviour {
 
 	private float positionX,positionZ,scaleBoardZ;
 	private bool initialize;
-	public ApplicationPause pause;
+	public Finishgame finish;
 
 	// Use this for initialization
 	void Start () {
-		initialize = false;
-		//find out the scale and postion of board
+		positionX = obstacle.transform.localPosition.x;
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (pause != null && !pause.isPaused ()) {//if not paused
-			//initilice only the firts frame
-			if (!initialize) {
-				positionX = obstacle.transform.localPosition.x;
-				scaleBoardZ = board.transform.localScale.z;
-				initialize = true;
-			}
-			positionZ = obstacle.transform.localPosition.z;
-
-			if (positionZ > (scaleBoardZ) / 4.0f) {
-				speed = -speed;
-			} else if (positionZ < -(scaleBoardZ) / 4.0f) {
-				speed = -speed;
-			}
-
-			positionZ = positionZ + speed;//change the position of the obstacle
+		if (finish != null && finish.isNotFinish ()) {//if not paused
+			positionZ = obstacle.transform.localPosition.z + speed;//change the position of the obstacle
 			obstacle.transform.localPosition = new Vector3 (positionX, 1, positionZ);
 		}
 	}

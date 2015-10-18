@@ -5,7 +5,7 @@ public class PostionScaleElements : MonoBehaviour {
 	
 	//declare all atribute 
 	public GameObject board;
-	public float ScaleX,ScaleZ;
+	public float ScaleX,ScaleZ;//Scale of the board
 	
 	public float heightWalls;
 	public GameObject WallsHorizontal;
@@ -15,15 +15,14 @@ public class PostionScaleElements : MonoBehaviour {
 	public GameObject WallsVertical;
 	public GameObject WallsWest;
 	public GameObject WallsEast;
-	
+
+	public float heightCylinder;
 	public GameObject Cylinders;
 	public GameObject CylinderA1;
 	public GameObject CylinderA2;
 	public GameObject CylinderA3;
 	public GameObject CylinderA4;
-	public float heightCylinder;
-	
-	public GameObject obstacle;
+
 
 	public GameObject ball;
 
@@ -90,13 +89,7 @@ public class PostionScaleElements : MonoBehaviour {
 		board.transform.localPosition= new Vector3(0, 0, 0);
 		board.transform.localScale = new Vector3(ScaleX, 1, ScaleZ);
 	}
-	
-	public void positionScaleObstacle(){
-		//find out the scale and postion of board
-		//position and scale the obstacle
-		obstacle.transform.localPosition= new Vector3(ScaleX / 5.0f, 1.0f, ScaleZ / 4.0f);
-		obstacle.transform.localScale = new Vector3(1, 1, ScaleZ/2);
-	}
+
 	
 	
 	
@@ -106,7 +99,6 @@ public class PostionScaleElements : MonoBehaviour {
 		positionScaleBoard ();
 		positionScaleWalls ();
 		positionScaleCylinder ();
-		positionScaleObstacle ();
 		postionScaleBall ();
 		positionscaleGoal ();
 		positionScaleBounds ();

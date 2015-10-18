@@ -39,7 +39,6 @@ public class Teletransport : MonoBehaviour {
 		yield return new WaitForSeconds(timeTeletransport);   //Wait
 		//print(Time.time);
 		teleported = true;//when the wait time finish appear game over
-		
 	}
 
 
