@@ -3014,7 +3014,7 @@ Transform:
   - {fileID: 144786202}
   - {fileID: 132567177}
   m_Father: {fileID: 1653863741}
-  m_RootOrder: 8
+  m_RootOrder: 6
 --- !u!1001 &389250605
 Prefab:
   m_ObjectHideFlags: 0
@@ -3052,7 +3052,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0b365f1cf1c2db347b67e702f8243333, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0b365f1cf1c2db347b67e702f8243333, type: 3}
       propertyPath: m_LocalScale.x
@@ -10334,7 +10334,6 @@ GameObject:
   - 4: {fileID: 656361887}
   - 33: {fileID: 656361890}
   - 65: {fileID: 656361889}
-  - 23: {fileID: 656361888}
   m_Layer: 0
   m_Name: cross
   m_TagString: Untagged
@@ -10354,30 +10353,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2074741829}
   m_RootOrder: 0
---- !u!23 &656361888
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 656361886}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!65 &656361889
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10839,7 +10814,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c00f149753bc9ac4084ca6fc3d49fbe9, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: c00f149753bc9ac4084ca6fc3d49fbe9, type: 3}
       propertyPath: m_Name
@@ -11371,7 +11346,6 @@ GameObject:
   - 4: {fileID: 768418407}
   - 33: {fileID: 768418410}
   - 65: {fileID: 768418409}
-  - 23: {fileID: 768418408}
   m_Layer: 0
   m_Name: cross
   m_TagString: Untagged
@@ -11391,30 +11365,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 470926878}
   m_RootOrder: 0
---- !u!23 &768418408
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 768418406}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!65 &768418409
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11583,7 +11533,6 @@ GameObject:
   - 4: {fileID: 816439429}
   - 33: {fileID: 816439432}
   - 65: {fileID: 816439431}
-  - 23: {fileID: 816439430}
   m_Layer: 0
   m_Name: cross
   m_TagString: Untagged
@@ -11603,30 +11552,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 827641188}
   m_RootOrder: 0
---- !u!23 &816439430
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 816439428}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!65 &816439431
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12049,7 +11974,6 @@ GameObject:
   - 4: {fileID: 859277363}
   - 33: {fileID: 859277366}
   - 65: {fileID: 859277365}
-  - 23: {fileID: 859277364}
   m_Layer: 0
   m_Name: cross
   m_TagString: Untagged
@@ -12069,30 +11993,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 332827935}
   m_RootOrder: 0
---- !u!23 &859277364
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 859277362}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!65 &859277365
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14918,7 +14818,6 @@ GameObject:
   - 4: {fileID: 933607551}
   - 33: {fileID: 933607555}
   - 65: {fileID: 933607554}
-  - 23: {fileID: 933607553}
   - 114: {fileID: 933607552}
   m_Layer: 0
   m_Name: target2Trigger
@@ -14953,30 +14852,6 @@ MonoBehaviour:
   haloPlayer: {fileID: 191428, guid: 1e6544cb0fca19b448e3369d85010d5d, type: 2}
   unionTime: .300000012
   id: 1
---- !u!23 &933607553
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 933607550}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!65 &933607554
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16387,7 +16262,6 @@ GameObject:
   - 4: {fileID: 1104287073}
   - 33: {fileID: 1104287076}
   - 65: {fileID: 1104287075}
-  - 23: {fileID: 1104287074}
   m_Layer: 0
   m_Name: cross
   m_TagString: Untagged
@@ -16407,30 +16281,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1080182419}
   m_RootOrder: 0
---- !u!23 &1104287074
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1104287072}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!65 &1104287075
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18746,7 +18596,6 @@ GameObject:
   - 4: {fileID: 1219877561}
   - 33: {fileID: 1219877565}
   - 65: {fileID: 1219877564}
-  - 23: {fileID: 1219877563}
   - 114: {fileID: 1219877562}
   m_Layer: 0
   m_Name: DuplicatorTrigger
@@ -18784,30 +18633,6 @@ MonoBehaviour:
   target2: {fileID: 933607550}
   duplicationTime: .300000012
   haloPlayer: {fileID: 191428, guid: 31c55a30c1c9892448e40db8fbc02551, type: 2}
---- !u!23 &1219877563
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1219877560}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!65 &1219877564
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20352,7 +20177,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Scene number
 --- !u!222 &1302726714
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22171,7 +21996,6 @@ GameObject:
   - 4: {fileID: 1545690230}
   - 33: {fileID: 1545690234}
   - 65: {fileID: 1545690233}
-  - 23: {fileID: 1545690232}
   - 114: {fileID: 1545690231}
   m_Layer: 0
   m_Name: target1Trigger
@@ -22206,30 +22030,6 @@ MonoBehaviour:
   haloPlayer: {fileID: 191428, guid: 1e6544cb0fca19b448e3369d85010d5d, type: 2}
   unionTime: .300000012
   id: 1
---- !u!23 &1545690232
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1545690229}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!65 &1545690233
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23370,9 +23170,9 @@ Transform:
   - {fileID: 369014088}
   - {fileID: 861921200}
   - {fileID: 155337962}
+  - {fileID: 382331023}
   - {fileID: 597880110}
   - {fileID: 389250606}
-  - {fileID: 382331023}
   m_Father: {fileID: 1080406929}
   m_RootOrder: 6
 --- !u!1 &1671933264
@@ -23728,7 +23528,6 @@ GameObject:
   - 4: {fileID: 1689604355}
   - 33: {fileID: 1689604358}
   - 65: {fileID: 1689604357}
-  - 23: {fileID: 1689604356}
   m_Layer: 0
   m_Name: cross
   m_TagString: Untagged
@@ -23748,30 +23547,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2024896070}
   m_RootOrder: 0
---- !u!23 &1689604356
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1689604354}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!65 &1689604357
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23893,7 +23668,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 6dde51e1b337bde4cb58df84509343e7, type: 3}
       propertyPath: m_Name
-      value: Ball (1)
+      value: Ball2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 6dde51e1b337bde4cb58df84509343e7, type: 3}
       propertyPath: m_LocalScale.x
@@ -27709,7 +27484,6 @@ GameObject:
   - 4: {fileID: 1844617048}
   - 33: {fileID: 1844617051}
   - 65: {fileID: 1844617050}
-  - 23: {fileID: 1844617049}
   - 114: {fileID: 1844617052}
   m_Layer: 0
   m_Name: cross
@@ -27730,30 +27504,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 979760725}
   m_RootOrder: 0
---- !u!23 &1844617049
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1844617047}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!65 &1844617050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30989,7 +30739,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0b365f1cf1c2db347b67e702f8243333, type: 3}
       propertyPath: m_Name
-      value: jump (1)
+      value: jump2
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 0b365f1cf1c2db347b67e702f8243333, type: 3}
       propertyPath: m_IsActive
@@ -31279,7 +31029,6 @@ GameObject:
   - 4: {fileID: 2060223673}
   - 33: {fileID: 2060223676}
   - 65: {fileID: 2060223675}
-  - 23: {fileID: 2060223674}
   m_Layer: 0
   m_Name: cross
   m_TagString: Untagged
@@ -31299,30 +31048,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 674848754}
   m_RootOrder: 0
---- !u!23 &2060223674
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2060223672}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!65 &2060223675
 BoxCollider:
   m_ObjectHideFlags: 0

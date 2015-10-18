@@ -20,10 +20,10 @@ public class ActivePower : MonoBehaviour {
 		{
 			isActive=!isActive;//active/deactive the  power
 			if(isActive){//chage color
-				ball_model.GetComponent<Renderer>().material =ball_red;
+				ball_model.GetComponent<Renderer>().material=ball_red;
 			}
 			else{
-				ball_model.GetComponent<Renderer>().material =ball_white;
+				ball_model.GetComponent<Renderer>().material=ball_white;
 			}
 		}
 	}

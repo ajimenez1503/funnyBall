@@ -5,10 +5,9 @@ public class MoveObstacle : MonoBehaviour {
 
 	//declare all atribute 
 	public GameObject obstacle;
-	public GameObject board;
 	public float speed;
 
-	private float positionX,positionZ,scaleBoardZ;
+	private float positionX,positionZ;
 	private bool initialize;
 	public Finishgame finish;
 
@@ -19,7 +18,8 @@ public class MoveObstacle : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 		if (finish != null && finish.isNotFinish ()) {//if not paused
 			positionZ = obstacle.transform.localPosition.z + speed;//change the position of the obstacle
 			obstacle.transform.localPosition = new Vector3 (positionX, 1, positionZ);

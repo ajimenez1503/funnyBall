@@ -18,7 +18,7 @@ public class BallUnion : MonoBehaviour {
 		currentID = -1;//if you dont duplicate the ball
 	}
 
-	//when you touch the collider
+	//when the ball touch the tarjet
 	void OnTriggerEnter(Collider other){
 		if (other.CompareTag ("ball") && !ballInside && !ballInProcess && (currentID == -1 || currentID == id)) {
 			Instantiate(haloPlayer, transform.position, transform.rotation);//create the animation
@@ -28,7 +28,7 @@ public class BallUnion : MonoBehaviour {
 		}
 	}
 
-	//when you go out the collider
+	//when the ball go out the tarjet
 	void OnTriggerExit(Collider other){
 		if (other.CompareTag ("ball")) {
 			ballInside = false;

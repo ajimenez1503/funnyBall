@@ -105,6 +105,7 @@ public class Finishgame : MonoBehaviour {
 	}
 	*/
 
+	//check if is playing
 	public bool isNotFinish(){
 		return finish == 0;
 	}

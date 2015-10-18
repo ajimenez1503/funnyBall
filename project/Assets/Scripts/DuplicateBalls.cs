@@ -36,7 +36,7 @@ public class DuplicateBalls : MonoBehaviour {
 
 			teleported = false;
 		}
-		//check if the ball is in the specific tarject
+		//check if the both balls are in the both tarjet.
 		if (target1.GetComponent<BallUnion> ().isActivated () && target2.GetComponent<BallUnion> ().isActivated ()) {
 			ballInside = true;
 			//change the positon of the first ball
@@ -47,8 +47,11 @@ public class DuplicateBalls : MonoBehaviour {
 			target2.GetComponent<BallUnion> ().processFinished();
 		}
 	}
+
+
 	//when you touch the collider
 	void OnTriggerEnter(Collider other){
+		//the ball enter in the duplicator
 		if (other.CompareTag ("ball") && !ballInside) {
 			ball1.SetActive(false);
 			ball2.SetActive(false);
